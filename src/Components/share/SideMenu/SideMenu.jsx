@@ -46,8 +46,9 @@ const useStyles = makeStyles((theme) => ({
     
     
 }))
+
+
 function SideMenu(props) {
-    
     // const theme = useTheme();
     const classes = useStyles();
 
@@ -59,7 +60,6 @@ function SideMenu(props) {
     const {openMenu, openMenuFunc} = props;
   
     
-
     return (
     <div className={classes.root}>
         <CssBaseline />

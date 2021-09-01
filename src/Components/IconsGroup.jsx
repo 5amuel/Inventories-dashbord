@@ -28,7 +28,9 @@ const IconsGroups = () => {
                     </ListItem>
                 ))}
             </List>
+            
             <Divider />
+
             <List>
                 {['All mail', 'Trash', 'Spam', '...Others'].map((text, index) => (
                     <ListItem button key={text}>
@@ -40,8 +42,7 @@ const IconsGroups = () => {
                 ))}
             </List>
         </>
-
-     );
+    );
 }
  
 export default IconsGroups;

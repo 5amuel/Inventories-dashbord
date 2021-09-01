@@ -8,7 +8,7 @@ import clsx from 'clsx';
 const drawerWidth = 240;
 function HeaderMenu() {
     
-  const useStyles = makeStyles((theme) => ({
+    const useStyles = makeStyles((theme) => ({
         menuButton: {
             marginRight: theme.spacing(2),
         },
@@ -37,6 +37,7 @@ function HeaderMenu() {
         setOpen(true)
         console.log(open)
     }
+
     return (
         
         <AppBar 
