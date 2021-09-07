@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(5),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-        minWidth: 275,
+        minWidth: 120,
         flexGrow:1,
     },
     // content: {
@@ -45,8 +45,8 @@ const Linechart = () => {
     const theme = useTheme()
     return ( 
         <Container style={{ paddingTop: 100 }}>
-            <Grid container spacing={6} >
-                <Grid container item xs={12} sm={7}  spacing={3}>                  
+            <Grid container spacing={6} justifyContent="center">
+                <Grid container item xs={12} sm={9}  spacing={3}>                  
                     <Card className={classes.root}>
                         <CardContent>
                             <div style={{ width: '100%', height: 200 }}>
@@ -62,7 +62,7 @@ const Linechart = () => {
                         </CardContent>
                     </Card>
                 </Grid>  
-                <Grid container item xs={12} sm={5} spacing={3}>
+                <Grid container item xs={12} sm={3} spacing={3}>
                     <Paper className={classes.paper}>Text
                     
                     </Paper>
