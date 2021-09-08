@@ -1,9 +1,11 @@
-import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core'
+import { AppBar, IconButton, Toolbar, Typography, Box } from '@material-ui/core'
 import { Menu as MenuIcon } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles';
 import { useState } from 'react';
 import SideMenu from '../SideMenu/SideMenu'
 import clsx from 'clsx';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import Badge from '@material-ui/core/Badge';
 
 const drawerWidth = 240;
 function HeaderMenu() {
@@ -46,7 +48,7 @@ function HeaderMenu() {
                 [classes.appBarShift]: open,
               })}
         >
-            <Toolbar>
+            <Toolbar style={{position: "relative"}} >
                 <IconButton 
                     color="inherit"
                     arial-label="open drawer"
@@ -60,6 +62,15 @@ function HeaderMenu() {
                 <Typography variant="h6" noWrap>
                     Inventory System
                 </Typography>
+
+                <Box position="absolute" right="3%" >
+                    <IconButton color="inherit" >
+                        <Badge badgeContent={4} color="secondary">
+                            <NotificationsIcon />
+                        </Badge>
+                    </IconButton>
+                </Box>
+                
             </Toolbar>
             <SideMenu openMenu={open} openMenuFunc={setOpen}/>
         </AppBar>

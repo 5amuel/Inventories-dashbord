@@ -1,25 +1,17 @@
-import React, { PureComponent } from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Container, Grid, Paper, Typography, Box, Link } from '@material-ui/core';
-import {sizing} from '@material-ui/system'
+import { makeStyles } from '@material-ui/core/styles';
+import { Container, Grid, Typography, Box, Link } from '@material-ui/core';
 
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
       minWidth: 275,
       flexGrow: 1,
     },
-    paper: {
-        padding: theme.spacing(5),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        minWidth: 120,
-        flexGrow:1,
-    },
+
     title: {
         fontSize: 20,
     },
@@ -28,22 +20,7 @@ const useStyles = makeStyles((theme) => ({
         width: "60px",
         margin: "80px 0px 0px -25px", 
         position: 'fixed',
-        
-        
-
     },
-    // content: {
-    //     flexGrow: 1,
-    //     padding: theme.spacing(2),
-    // },
-    // underBar: {
-    //     display: 'flex',
-    //     alignItems: 'center',
-    //     padding: theme.spacing(15, 3),
-    //     // necessary for content to be below app bar
-    //     ...theme.mixins.toolbar,
-    //     justifyContent: 'flex-start',
-    // },
 }));
 
 const data = [ 
@@ -60,7 +37,7 @@ const data = [
 
 const Linechart = () => {
     const classes = useStyles()
-    const theme = useTheme()
+    
     return ( 
         <Container style={{ paddingTop: 100 }}>
             <Grid container spacing={6} justifyContent="center">
@@ -84,10 +61,8 @@ const Linechart = () => {
                     </Card>
                 </Grid>  
                 <Grid container item xs={12} sm={12} md={4} lg={3} spacing={3}>
-                   
                    <Card className={classes.root}>
                        <CardContent>
-                           
                             <Box style={{ width: '100%' }}>
                                 <Typography  color="primary" variant="h6">
                                     <Box fontSize={20} pl={1}  display="block">
@@ -100,13 +75,13 @@ const Linechart = () => {
                                         $3,024.00
                                     </Box>
                                 </Typography>
-                                <Typography variant="h7" >
-                                    <Box pl={1} display="block" >
+                                <Typography variant="h6" >
+                                    <Box fontSize={16} pl={1} display="block" >
                                         on 15 March, 2019
                                     </Box>
                                 </Typography>
-                                <Typography  color="primary" variant="h7">
-                                    <Box pl={1} mt={15} display="block">
+                                <Typography  color="primary" variant="h5">
+                                    <Box fontSize={15} pl={1} mt={15} display="block">
                                         <Link href="#" >
                                             View balance
                                         </Link>
@@ -115,13 +90,6 @@ const Linechart = () => {
                             </Box>
                        </CardContent>
                     </Card>
-                   
-                   
-                      
-
-                    
-                        
-                 
                 </Grid>
             </Grid>
        </Container>
