@@ -44,14 +44,14 @@ const useStyles = makeStyles((theme) => ({
         width: drawerWidth,
     },
     
-    
+   
 }))
+
 
 
 function SideMenu(props) {
     // const theme = useTheme();
     const classes = useStyles();
-
     const handleDrawerClose = () => { 
         openMenuFunc(false)
         console.log(openMenu)
